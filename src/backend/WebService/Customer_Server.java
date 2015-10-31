@@ -92,6 +92,7 @@ public class Customer_Server extends HttpServlet {
 				double techLat=rs.getDouble(4);
 				double techlng=rs.getDouble(5);
 				if(distFrom(customerLat, customerLng, techLat, techlng)<=5){
+					tech.put("tech_id", rs.getInt(1));
 					tech.put("techLat", rs.getDouble(4));
 					tech.put("techLng", rs.getDouble(5));
 					arr.put(tech);
